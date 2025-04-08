@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import FinancialProfile from '@/components/FinancialProfile';
+import BehavioralAnalysis from '@/components/BehavioralAnalysis';
+import InvestmentRecommendations from '@/components/InvestmentRecommendations';
+import GoalPlanner from '@/components/GoalPlanner';
+import EducationSection from '@/components/EducationSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      
+      <main className="container px-4 py-8">
+        <FinancialProfile />
+        <BehavioralAnalysis />
+        <InvestmentRecommendations />
+        <GoalPlanner />
+        <EducationSection />
+        
+        <footer className="text-center text-muted-foreground text-sm py-6 mt-6 border-t">
+          <p>FinXpert AI Wealth Guardian | Powered by Advanced AI</p>
+          <p className="mt-2">© {new Date().getFullYear()} FinXpert - Breaking the Middle Class Trap</p>
+        </footer>
+      </main>
     </div>
   );
 };
